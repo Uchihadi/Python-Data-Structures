@@ -54,13 +54,18 @@ class LinkedList:
         return msg
 
 def count_nodes(biscuit_list):
+    #2. Create a variable to count nodes
     count=0
     
+    #1. Create a temp node pointing to head
     temp = biscuit_list.get_head()
+    
+    #3. If the temp node is not null increase 
     while (temp != None):
         count += 1
         temp = temp.get_next()
-    # Write your logic here
+    
+    #4. return the count
     return count
 
 biscuit_list=LinkedList()
