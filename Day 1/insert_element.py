@@ -45,4 +45,3 @@ marias_lst.insert(1,"Salt")
 print(marias_lst)
 print("List details:")
 list_details(marias_lst)
-                                              
