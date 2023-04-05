@@ -5,13 +5,14 @@
 # If an element in list1/list2 is None, then the corresponding element in the other list should be kept as it is in the merged list
 
 def merge_list(list1, list2):
-    list2 = list2.reverse()
+    list2.reverse()
     merged_data=""
-    # for i in list1:
-    #     for j in list2:
-            
+    for i in range(len(list1) - 1):
+        for j in range (len(list2)  - 1):
+            merged_data += str(list1[i]) + str(list2[j]) +" "
+            break 
     #write your logic here
-    pass
+    return merged_data
 
 #Provide different values for the variables and test your program
 list1=['A', 'app','a', 'd', 'ke', 'th', 'doc', 'awa']
