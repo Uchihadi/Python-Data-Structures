@@ -17,9 +17,17 @@ class Car:
 
     def __str__(self):
         return(self.__model+" "+self.__registration_number+" "+(str)(self.__year))
-
-#Implement Service class here
-
+    
+    #Implement Service class here
+    def find_cars_by_year (year):
+        pass
+    
+    def add_cars (new_car_list):
+        pass
+    
+    def remove_cars_from_karnataka ():
+        pass
+    
 car1=Car("WagonR",2010,"KA09 3056")
 car2=Car("Beat", 2011, "MH10 6776")
 car3=Car("Ritz", 2013,"KA12 9098")
