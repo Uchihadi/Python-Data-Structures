@@ -100,11 +100,18 @@ class LinkedList:
         msg=" ".join(msg)
         msg="Linkedlist data(Head to Tail): "+ msg
         return msg
-    
+
+# Write a python function which finds and returns the sum of all the elements at the odd position in the given linked list
 def find_sum(number_list):
     sum=0
     # Write your logic here
-
+    temp = number_list.get_head()
+    count = 1
+    while (temp is not None):
+        if count % 2:
+             sum += temp.get_data()
+        temp = temp.get_next()
+        count += 1
     return sum
 
 number_list=LinkedList()
