@@ -112,8 +112,6 @@ class Queue:
         msg="Queue data(Front to Rear): "+msg
         return msg
 
-
-
 def fun(input_stack):
     output_queue=Queue(input_stack.get_max_size())
     temp_queue=Queue(input_stack.get_max_size())
