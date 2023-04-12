@@ -1,8 +1,10 @@
 #lex_auth_0127667385795952643524
 
-def find_decreasing_start(list1,start,end):
-    #Remove pass and write your logic here
-    pass
+def find_decreasing_start(list1, start, end):
+    for i in range (start, end):
+        if list1[i] > list1[i+1]:
+            return i+1
+    return None
 
 #Use different values for list1 and test your program
 list1=[1,4,7,8,9,5,4]
