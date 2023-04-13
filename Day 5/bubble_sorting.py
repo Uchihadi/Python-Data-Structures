@@ -21,7 +21,7 @@ def bubble_sort(num_list):
 
 no_of_swaps=0
 no_of_passes=0
-num_list=[5,4,3,2,1]
+num_list=[67, 34, 8, 22, 23]
 print("In the beginning:",num_list)
 print("______________________________________________")
 bubble_sort(num_list)
