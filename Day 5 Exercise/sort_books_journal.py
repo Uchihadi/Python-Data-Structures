@@ -6,7 +6,8 @@ class Item:
         self.__item_name = item_name
         self.__author_name = author_name
         self.__published_year = published_year
-        
+    
+    #You can use the below __str__() to print the elements of the DS object while debugging
     def __str__(self):
         pass
     
@@ -20,7 +21,22 @@ class Item:
         return self.__published_year
     
 #Implement Library class here
-
+class Library:
+    def __init__(self, item_list):
+        self.__item_list = item_list
+        
+    def get_item_list (self):
+        return self.__item_list
+    
+    def sort_item_list_by_author (new_item_list):
+        pass
+    
+    def add_new_items (new_item_list):
+        pass
+    
+    def sort_items_by_published_year (self):
+        pass
+                 
 #Use different values for item and test your program
 item1=Item("A Mission In Kashmir","Andrew Whitehead",1995)
 item2=Item("A Passage of India","E.M.Forster",2012)
