@@ -115,7 +115,6 @@ class Circle:
     def get_radius(self):
         return self.__radius
     
-    
 class Shape:
     def __init__(self,circle_list):
         self.__circle_list=circle_list
