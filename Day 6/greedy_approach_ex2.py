@@ -1,28 +1,29 @@
-#lex_auth_0127667363417702403454
-def find_number_of_platforms(arrival_time_list,departure_time_list):
-    arrival_time_list.sort()
-    departure_time_list.sort()
-    
-    # Step 2: Initialize variables
-    i = j = 0
-    max_trains = curr_trains = 0
+#lex_auth_0127667392950599683407
+def find_maximum_activities(activity_list, start_time_list, finish_time_list):
+    n = len(activity_list)
+    activities = []
+    for i in range(n):
+        activities.append((activity_list[i], start_time_list[i], finish_time_list[i]))
 
-    # Step 5: Loop through the lists
-    while i < len (arrival_time_list):
-        if arrival_time_list [i] <= departure_time_list [j]:
-            curr_trains += 1
-            i += 1
-        else:
-            curr_trains -= 1
-            j += 1
-        max_trains = max(max_trains, curr_trains)
+    # sort the activities based on their finish times in ascending order
+    activities.sort(key=lambda x: x[2])
 
-    # Step 6: Return the result
-    return max_trains
+    result = []
+    last_finish_time = -1
+    for activity in activities:
+        if activity[1] > last_finish_time:
+            result.append(activity[0])
+            last_finish_time = activity[2]
+
+    return result
 
 #Pass different values to the function and test your program
-arrival_time_list = [800,810]
-departure_time_list = [2300,2000]
-print("The arrival time of the trains:", arrival_time_list)
-print("The departure time of the trains:",departure_time_list)
-print("Minimum number of platforms required :",find_number_of_platforms(arrival_time_list,departure_time_list))
+activity_list=[1,2,3,4,5,6]
+start_time_list=[1, 3, 0, 5, 8, 5]
+finish_time_list= [2, 4, 6, 7, 9, 9]
+print("Activities:",activity_list)
+print("Start time of the activities:",start_time_list)
+print("Finishing time of the activities:", finish_time_list)
+
+result=find_maximum_activities(activity_list,start_time_list, finish_time_list)
+print("The maximum set of activities that can be completed:",result)
