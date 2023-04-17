@@ -1,4 +1,10 @@
 #lex_auth_0127667392950599683407
+
+# Sort the activities based on their finish times in ascending order.
+# Select the first activity from the sorted list and add it to the result set.
+# For each subsequent activity, check if its start time is greater than or equal to the finish time of the last selected activity. If it is, then add it to the result set.
+# Return the result set.
+
 def find_maximum_activities(activity_list, start_time_list, finish_time_list):
     n = len(activity_list)
     activities = []
